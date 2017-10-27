@@ -3,7 +3,7 @@ from flask import Flask, render_template, Markup
 import numpy as np
 import pandas as pd
 
-app = Flask(__name__, static_url_path = '')
+app = Flask(__name__)
 
 foods = pd.read_csv('foods_filter_names.csv')
 flavors = pd.read_csv('flavors.csv')
@@ -35,7 +35,7 @@ bridge_words2 = [
 
 @app.route('/', strict_slashes=False)
 @app.route('/<N>', strict_slashes=False)
-def index(N=1):
+def index(N=5):
     N = int(N)
     items = [gen_one() for i in range(N)]
     return render_template('index.html', items=items)
