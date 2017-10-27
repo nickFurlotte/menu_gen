@@ -6,11 +6,12 @@ import pandas as pd
 app = Flask(__name__)
 
 foods = pd.read_csv('foods_filter_names.csv')
-flavors = pd.read_csv('flavors.csv')
+#flavors = pd.read_csv('flavors.csv')
 
-flavor_names = flavors.name.values.flatten()
-food_names = foods.name.values.flatten()
+flavor_names = ['flavor1','flavor2'] # flavors.name.values.flatten()
+food_names = ['food1','food2'] # foods.name.values.flatten()
 cooking_styles = [
+
     'grilled','fried','deep fried', 'braised','skillet fried','pan fried','boiled','steamed','sous vide','flambee','fast fry','foamed','deconstructed','scraped','quickened',
     'blistered','lifted'
 
