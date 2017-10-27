@@ -33,6 +33,8 @@ bridge_words2 = [
     'featuring','with','wrapped with','entangled in','created with','massaged on','massaged with','fully expressed with','deconstructed with','deconstructed on','with drippings of'
 ]
 
+singles = ['booze','washed egg','mothers milk','salmon feet']
+
 @app.route('/', strict_slashes=False)
 @app.route('/<N>', strict_slashes=False)
 def index(N=5):
@@ -41,8 +43,9 @@ def index(N=5):
     return render_template('index.html', items=items)
 
 def gen_one():
-    starter = np.random.choice(adjectives).title()
-    template = '''
+    try:
+        starter = np.random.choice(adjectives).title()
+        template = '''
         %s of %s and %s %s %s %s %s %s and %s %s
     ''' % (
         starter,
@@ -56,6 +59,8 @@ def gen_one():
         np.random.choice(cooking_styles2),
         np.random.choice(food_names).lower(),
     )
+    except: 
+        template = np.random.choice(singles)
     return {'text':template,'price':np.random.randint(8,22)}
 
 if __name__ == '__main__':
