@@ -15,13 +15,15 @@ food_names = foods.name.values.flatten()
 cooking_styles = [
 
     'grilled','fried','deep fried', 'braised','skillet fried','pan fried','boiled','steamed','sous vide','flambee','fast fry','foamed','deconstructed','scraped','quickened',
-    'blistered','lifted'
+    'blistered','lifted','locally sourced','beer braised','assorted','tossed','sprouted',
+    'rubbed'
 
 ]
 
 cooking_styles2 = [
     'British','American','Thai','Chinese','Southern','Mid-Western','Indian', "Creole",'Greek','Middle Eastern', 'gluten free','Mexican','TexMex','French',
-    'Southern Trailer Park','Late Summer'
+    'Southern Trailer Park','Late Summer','rustic','homespun','market','virgin',
+    'farm-to-table',
 ]
 
 adjectives = [
@@ -36,7 +38,7 @@ bridge_words2 = [
     'featuring','with','wrapped with','entangled in','created with','massaged on','massaged with','fully expressed with','deconstructed with','deconstructed on','with drippings of'
 ]
 
-singles = ['booze','washed egg','mothers milk','salmon feet']
+singles = ['booze','washed egg','mothers milk','salmon feet','water']
 
 @app.route('/', strict_slashes=False)
 @app.route('/<N>', strict_slashes=False)
