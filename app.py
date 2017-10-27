@@ -26,7 +26,7 @@ cooking_styles2 = [
     'farm-to-table',
 ]
 
-adjectives = [
+descriptors = [
     'fusion','confluence','barage','face full','mind blower','mouth full','explosion','plethora','cacophany','symphony','kamikaze',
 ]
 
@@ -49,7 +49,7 @@ def index(N=5):
 
 def gen_one():
     try:
-        starter = np.random.choice(adjectives).title()
+        starter = np.random.choice(descriptors).title()
         template = '''
         %s of %s and %s %s %s %s %s %s and %s %s
     ''' % (
